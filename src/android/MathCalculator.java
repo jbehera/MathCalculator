@@ -33,10 +33,11 @@ public class MathCalculator extends CordovaPlugin {
     private void add(JSONArray args, CallbackContext callback) {
         if(args != null) {
             try {
-                int p1 = Integer.parseInt(args.getJSONObject(0).getString("param1"));
-                int p2 = Integer.parseInt(args.getJSONObject(0).getString("param2"));
+                // int p1 = Integer.parseInt(args.getJSONObject(0).getString("param1"));
+                // int p2 = Integer.parseInt(args.getJSONObject(0).getString("param2"));
 
-                callback.success("" + (p1 + p2));
+                // callback.success("" + (p1 + p2));
+                callback.success(args);
             } catch (Exception e) {
                 callback.error("Something went wrong" + e);
             }
