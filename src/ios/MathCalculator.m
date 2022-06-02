@@ -36,7 +36,7 @@
     NSNumber *param2 = [[command.arguments objectAtIndex:0] valueForKey:@"param2"];
 
     if(param1 >= 0 && param2 >= 0) {
-        NSNumber* total = @(param1 - param2);
+        NSNumber* total = @(param1 + param2);
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:total];
     } else {
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
