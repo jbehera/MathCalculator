@@ -27,6 +27,12 @@ public class MathCalculator extends CordovaPlugin {
             return true;
         }
 
+        if (action.equals("sampleMethod")) {
+            String message = args.getString(0);
+            this.sampleMethod(message, callbackContext);
+            return true;
+        }
+        
         return false;
     }
 
@@ -58,6 +64,14 @@ public class MathCalculator extends CordovaPlugin {
             }
         } else {
             callback.error("no args passed in");
+        }
+    }
+
+    private void sampleMethod(String message, CallbackContext callbackContext) {
+        if (message != null && message.length() > 0) {
+            callbackContext.success(message);
+        } else {
+            callbackContext.error("Expected one non-empty string argument.");
         }
     }
 }

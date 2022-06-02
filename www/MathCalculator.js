@@ -7,3 +7,8 @@ module.exports.add = function(args0, success, error) {
 module.exports.substract = function(args0, success, error) {
     exec(success, error, 'MathCalculator', 'substract', [args0]);
 }
+
+
+module.exports.sampleMethod = function (arg0, success, error) {
+    exec(success, error, 'MathCalculator', 'sampleMethod', [arg0]);
+};
