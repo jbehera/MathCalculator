@@ -27,7 +27,7 @@ public class MathCalculator extends CordovaPlugin {
 
     private void sampleMethod(String message, CallbackContext callbackContext) {
         if (message != null && message.length() > 0) {
-            callbackContext.success(message);
+            callbackContext.success("Hello from android: " + message);
         } else {
             callbackContext.error("Expected one non-empty string argument.");
         }
